@@ -84,3 +84,31 @@ class Team {
         input.close();
     }
 }
+
+class BitLandBit {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int n = input.nextInt();
+        int counter = 0;
+
+        for (int b = 0; b < n; b++) {
+            String s = input.next();
+            switch (s) {
+                case "X++":
+                case "++X":
+                    ++counter;
+                    break;
+                case "X--":
+                case "--X":
+                    counter--;
+                    break;
+                default:
+                    break;
+            }
+        }
+        System.out.println(counter);
+
+        input.close();
+    }
+}
