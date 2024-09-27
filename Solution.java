@@ -62,3 +62,25 @@ class ToLongWords {
         input.close();
     }
 }
+
+class Team {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int n = input.nextInt();
+        int mustSolve = 0;
+
+        while (n-- > 0) {
+            int P = input.nextInt();
+            int V = input.nextInt();
+            int T = input.nextInt();
+
+            if (P + V + T >= 2) {
+                mustSolve++;
+            }
+        }
+
+        System.out.println(mustSolve);
+        input.close();
+    }
+}
