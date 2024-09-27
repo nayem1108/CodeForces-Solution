@@ -41,3 +41,24 @@ class NextRound {
     }
 
 }
+
+class ToLongWords {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            String word = input.next();
+            String finalString = word;
+            if (word.length() > 10) {
+                char first = word.charAt(0);
+                char last = word.charAt(word.length() - 1);
+                String middle = word.substring(1, word.length() - 1);
+                finalString = first + String.valueOf(middle.length()) + last;
+            }
+            System.out.println(finalString);
+        }
+
+        input.close();
+    }
+}
