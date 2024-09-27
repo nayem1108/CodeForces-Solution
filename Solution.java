@@ -15,3 +15,29 @@ public class Solution {
         input.close();
     }
 }
+
+class NextRound {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextByte();
+        int k = input.nextByte();
+        int count = 0;
+
+        int scores[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            scores[i] = input.nextByte();
+        }
+
+        int kthScore = scores[k - 1];
+
+        for (int i = 0; i < n; i++) {
+            if (scores[i] > 0 && scores[i] >= kthScore) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+        input.close();
+    }
+
+}
