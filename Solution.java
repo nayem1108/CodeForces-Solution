@@ -262,3 +262,32 @@ class BoyOrGirl {
     }
 
 }
+
+class BearAndBigBrother {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int t = input.nextInt();
+
+        while (t-- > 0) {
+            int w0 = input.nextInt();
+            int w1 = input.nextInt();
+
+            int year = findYear(w0, w1);
+            System.out.println(year);
+        }
+
+        input.close();
+    }
+
+    private static int findYear(int limakWeightPerYear, int bobWeightPerYear) {
+        int year = 0;
+        while (limakWeightPerYear <= bobWeightPerYear) {
+            year++;
+            limakWeightPerYear *= 3;
+            bobWeightPerYear *= 2;
+        }
+
+        return year;
+    }
+}
