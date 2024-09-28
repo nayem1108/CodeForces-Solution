@@ -7,6 +7,7 @@
  */
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Solution {
 
@@ -182,6 +183,34 @@ class PetyaAndString {
             System.out.println(0);
         }
 
+        input.close();
+    }
+}
+
+class HelpFulMaths {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String str = input.next();
+
+        String[] newStr = str.split("\\+");
+
+        int[] numbers = new int[newStr.length];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = Integer.parseInt(newStr[i]);
+        }
+
+        Arrays.sort(numbers);
+
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < numbers.length; i++) {
+            result.append(numbers[i]);
+            if (i != numbers.length - 1) {
+                result.append("+");
+            }
+        }
+
+        System.out.println(result);
         input.close();
     }
 }
