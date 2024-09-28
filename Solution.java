@@ -8,6 +8,8 @@
 
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Set;
+import java.util.HashSet;
 
 public class Solution {
 
@@ -230,4 +232,33 @@ class WordCapitalization {
         System.out.println(st);
         input.close();
     }
+}
+
+class BoyOrGirl {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int t = input.nextInt();
+
+        while (t-- > 0) {
+
+            String name = input.next();
+
+            Set<Character> set = new HashSet<>();
+
+            for (char ch : name.toCharArray()) {
+                set.add(ch);
+            }
+
+            if (set.size() % 2 == 0) {
+                System.out.println("CHAT WITH HER!");
+            } else {
+                System.out.println("IGNORE HIM!");
+            }
+
+        }
+        input.close();
+
+    }
+
 }
