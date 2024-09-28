@@ -214,3 +214,20 @@ class HelpFulMaths {
         input.close();
     }
 }
+
+class WordCapitalization {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str = input.next();
+
+        String s = str.substring(0, 1);
+        s = s.toUpperCase();
+
+        StringBuilder st = new StringBuilder();
+        st.append(s);
+        st.append(str.substring(1, str.length()));
+
+        System.out.println(st);
+        input.close();
+    }
+}
