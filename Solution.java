@@ -329,3 +329,35 @@ class Elephant {
     }
 
 }
+
+class SoldierandBananas {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int k = input.nextInt();
+        int n = input.nextInt();
+        int w = input.nextInt();
+
+        int bananaPriceList[] = new int[w];
+
+        for (int i = 0; i < bananaPriceList.length; i++) {
+            bananaPriceList[i] = k * (i + 1);
+        }
+
+        int totalAmount = 0;
+
+        for (int i = 0; i < w; i++) {
+            totalAmount += bananaPriceList[i];
+        }
+
+        if (totalAmount > n) {
+            totalAmount = totalAmount - n;
+        } else {
+            totalAmount = 0;
+        }
+
+        System.out.println(totalAmount);
+
+        input.close();
+    }
+}
