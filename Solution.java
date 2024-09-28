@@ -361,3 +361,31 @@ class SoldierandBananas {
         input.close();
     }
 }
+
+class WordExtenstion {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String str = input.next();
+
+        int CountOfUpperCase = 0;
+        int CountOfIsLowerCase = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isUpperCase(str.charAt(i))) {
+                CountOfUpperCase++;
+            } else {
+                CountOfIsLowerCase++;
+            }
+        }
+
+        if (CountOfIsLowerCase >= CountOfUpperCase) {
+            str = str.toLowerCase();
+        } else {
+            str = str.toUpperCase();
+        }
+
+        System.out.println(str);
+        input.close();
+    }
+}
