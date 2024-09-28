@@ -311,3 +311,21 @@ class StonesOnTheTable {
         input.close();
     }
 }
+
+class Elephant {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int distance = input.nextInt();
+        int numberOfSteps = distance / 5;
+
+        if (distance % 5 != 0) {
+            numberOfSteps++;
+        }
+
+        System.out.println(numberOfSteps);
+        input.close();
+
+    }
+
+}
