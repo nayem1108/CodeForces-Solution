@@ -291,3 +291,23 @@ class BearAndBigBrother {
         return year;
     }
 }
+
+class StonesOnTheTable {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int n = input.nextInt();
+        String str = input.next();
+
+        int count = 0;
+        for (int i = 1; i < n; i++) {
+            if (str.charAt(i) == str.charAt(i - 1)) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+
+        input.close();
+    }
+}
