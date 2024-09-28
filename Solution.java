@@ -389,3 +389,27 @@ class WordExtenstion {
         input.close();
     }
 }
+
+class WrongSubtraction {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int x = input.nextInt();
+        int xCount = input.nextInt();
+
+        while (xCount != 0) {
+            if (x > 0) {
+                if (x % 10 == 0) {
+                    x /= 10;
+                } else {
+                    x--;
+                }
+            }
+            xCount--;
+        }
+
+        System.out.println(x);
+
+        input.close();
+    }
+}
