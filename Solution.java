@@ -511,3 +511,28 @@ class Translation {
         input.close();
     }
 }
+
+class Tram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int totalStops = input.nextInt();
+
+        int totalPassengersCapacity = 0;
+        int currentPassengers = 0;
+
+        for (int i = 0; i < totalStops; i++) {
+            int exit = input.nextInt();
+            int enter = input.nextInt();
+
+            currentPassengers -= exit;
+            currentPassengers += enter;
+
+            totalPassengersCapacity = Math.max(currentPassengers, totalPassengersCapacity);
+        }
+
+        System.out.println(totalPassengersCapacity);
+
+        input.close();
+
+    }
+}
