@@ -476,3 +476,38 @@ class AntonAndDanikChess {
         input.close();
     }
 }
+
+class Translation {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String s1 = input.next();
+        String s2 = input.next();
+
+        boolean correctlyTranslated = false;
+
+        if (s1.length() != s2.length()) {
+            correctlyTranslated = false;
+        } else {
+            char[] ch1 = s1.toCharArray();
+            char[] ch2 = s2.toCharArray();
+
+            for (int i = 0, j = ch2.length - 1; i < ch2.length && j >= 0; i++, j--) {
+                if (ch1[i] == ch2[j]) {
+                    correctlyTranslated = true;
+                } else {
+                    correctlyTranslated = false;
+                    break;
+                }
+            }
+
+        }
+
+        if (correctlyTranslated) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+        input.close();
+    }
+}
