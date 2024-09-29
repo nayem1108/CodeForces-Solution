@@ -412,30 +412,4 @@ class WrongSubtraction {
 
         input.close();
     }
-
-}
-
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        long number = input.nextLong();
-
-        String str = Long.toString(number);
-
-        StringBuilder result = new StringBuilder();
-
-        for (Character ch : str.toCharArray()) {
-            if (ch == '7' || ch == '4') {
-                result.append(ch);
-            }
-        }
-
-        if (result.length() == str.length()) {
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
-        }
-
-        input.close();
-    }
 }
