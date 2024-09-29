@@ -413,3 +413,36 @@ class WrongSubtraction {
         input.close();
     }
 }
+
+class NearlyLuckyNumber {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String str = input.next();
+        int count = 0;
+
+        for (char ch : str.toCharArray()) {
+            if (ch == '4' || ch == '7') {
+                count++;
+            }
+        }
+
+        String countStr = String.valueOf(count);
+        boolean isNearlyLucky = true;
+
+        for (char ch : countStr.toCharArray()) {
+            if (ch != '4' && ch != '7') {
+                isNearlyLucky = false;
+                break;
+            }
+        }
+
+        if (isNearlyLucky && count > 0) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+
+        input.close();
+    }
+}
