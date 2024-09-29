@@ -446,3 +446,33 @@ class NearlyLuckyNumber {
         input.close();
     }
 }
+
+class AntonAndDanikChess {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int n = input.nextInt();
+        String s = input.next();
+
+        int numberOfGameWinsByAnton = 0;
+        int numberOfGameWinsByDanik = 0;
+
+        for (Character ch : s.toCharArray()) {
+            if (ch == 'A') {
+                numberOfGameWinsByAnton++;
+            } else {
+                numberOfGameWinsByDanik++;
+            }
+        }
+
+        if (numberOfGameWinsByAnton > numberOfGameWinsByDanik) {
+            System.out.println("Anton");
+        } else if (numberOfGameWinsByAnton < numberOfGameWinsByDanik) {
+            System.out.println("Danik");
+        } else {
+            System.out.println("Friendship");
+        }
+
+        input.close();
+    }
+}
